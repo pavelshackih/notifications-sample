@@ -1,6 +1,5 @@
 package com.example.untitled1;
 
-import android.*;
 import android.R;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -17,7 +16,7 @@ import static android.app.PendingIntent.FLAG_CANCEL_CURRENT;
 /**
  *
  */
-class NotifyUtils {
+public class NotifyUtils {
 
     // --- static singletone
     private static NotifyUtils instance;
@@ -28,7 +27,7 @@ class NotifyUtils {
     private SparseArray<Notification> messages = new SparseArray<Notification>();
     private AtomicInteger incrementor = new AtomicInteger(1);
 
-    NotifyUtils(Context context) {
+    private NotifyUtils(Context context) {
         this.context = context;
         this.manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
     }

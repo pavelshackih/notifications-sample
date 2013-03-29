@@ -41,11 +41,11 @@ class NotifyUtils {
         NotificationCompat.Builder nb = new NotificationCompat.Builder(context)
                 .setSmallIcon(R.drawable.ic_lock_idle_alarm)
                 .setAutoCancel(true)
-                .setTicker("AbbyFine: все пропало, чуваки!")
+                .setTicker("Splash message")
                 .setContentText("Main Text")
                 .setContentIntent(PendingIntent.getActivity(context, 0, notificationIntent, FLAG_CANCEL_CURRENT))
                 .setWhen(System.currentTimeMillis())
-                .setContentTitle("Новое сообщение")
+                .setContentTitle("New message")
                 .setDefaults(Notification.DEFAULT_ALL);
         Notification notification = nb.build();
         instance.manager.notify(id, notification);
